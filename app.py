@@ -44,7 +44,12 @@ if page == "Overview":
     This project explores the development and evaluation of a MedMamba model for classifying pneumonia from medical images,
     and compares its performance against traditional RankSVM models (Linear and RBF kernels).
     """)
-    st.image("https://images.unsplash.com/photo-1579684385150-b49ef725345d?fit=crop&w=800&q=80", caption="Medical Imaging for Diagnosis")
+    
+    try:
+        overview_image_b64 = get_image_as_base64("medical_diagnosis.png") # Assuming you named your image this
+        st.image(f"data:image/png;base64,{overview_image_b64}", caption="Medical Imaging for Diagnosis")
+    except FileNotFoundError:
+        st.warning("Overview image (medical_diagnosis.png) not found. Please ensure it's in the same directory.")
 
 elif page == "Environment & Data":
     st.header("1. Environment Setup and Data Preparation")
