@@ -528,4 +528,3 @@ elif page == "Conclusion":
     """)
 
     st.markdown("---")
-    st.markdown("Created with ❤️ using Streamlit")
