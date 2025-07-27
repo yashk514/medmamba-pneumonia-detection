@@ -46,10 +46,10 @@ if page == "Overview":
     """)
     
     try:
-        overview_image_b64 = get_image_as_base64("medical_diagnosis.png") # Assuming you named your image this
-        st.image(f"data:image/png;base64,{overview_image_b64}", caption="Medical Imaging for Diagnosis")
+        overview_image_b64 = get_image_as_base64("medical_diagnosis.jpg") # Updated to match your actual file
+        st.image(f"data:image/jpeg;base64,{overview_image_b64}", caption="Medical Imaging for Diagnosis")
     except FileNotFoundError:
-        st.warning("Overview image (medical_diagnosis.png) not found. Please ensure it's in the same directory.")
+        st.warning("Overview image (medical_diagnosis.jpg) not found. Please ensure it's in the same directory.")
 
 elif page == "Environment & Data":
     st.header("1. Environment Setup and Data Preparation")
