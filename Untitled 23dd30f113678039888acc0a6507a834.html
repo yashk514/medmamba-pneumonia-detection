@@ -1,0 +1,1184 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Untitled</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-default { background-color: rgba(84, 72, 49, 0.08); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="23dd30f1-1367-8039-888a-cc0a6507a834" class="page sans"><header><h1 class="page-title"></h1><p class="page-description"></p></header><div class="page-body"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="23dd30f1-1367-80cb-a619-c8042f069e24" class="code"><code class="language-Python"># [RUN THIS CELL AT THE VERY TOP OF YOUR NOTEBOOK]
+
+import tensorflow as tf
+import numpy as np
+import datetime
+import matplotlib.pyplot as plt
+import os
+
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder
+from tensorflow.keras.preprocessing.image import load_img, img_to_array
+from tensorflow.keras.layers import RandomFlip, RandomRotation
+
+
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import (
+    Layer,
+    Dense,
+    Conv1D,
+    Conv2D,
+    LayerNormalization,
+    Activation,
+    Embedding,
+    Dropout,
+    GlobalAveragePooling1D,
+    Input
+)
+from einops.layers.tensorflow import Rearrange
+
+print(&quot;✅ All necessary libraries imported.&quot;)
+
+
+
+
+
+
+
+
+
+
+
+# [USE THIS CORRECTED CELL TO PREPARE THE PneumoniaMNIST DATASET]
+import numpy as np
+import tensorflow as tf
+from google.colab import drive
+
+# 1. Mount Google Drive
+drive.mount(&#x27;/content/drive&#x27;)
+
+# 2. Define the path to your dataset on Google Drive
+dataset_path = &#x27;/content/drive/My Drive/datasets/pneumoniamnist_224.npz&#x27;
+
+# 3. Load the data from the .npz file
+print(&quot;Loading data from .npz file...&quot;)
+pneumonia_data = np.load(dataset_path)
+
+# 4. Extract the image and label arrays
+X_train = pneumonia_data[&#x27;train_images&#x27;]
+y_train = pneumonia_data[&#x27;train_labels&#x27;]
+X_val = pneumonia_data[&#x27;val_images&#x27;]
+y_val = pneumonia_data[&#x27;val_labels&#x27;]
+print(&quot;Data arrays extracted.&quot;)
+
+# 5. --- THIS IS THE CORRECTED PART ---
+# First, add a channel dimension to the images (shape becomes 224, 224, 1)
+X_train = np.expand_dims(X_train, axis=-1)
+X_val = np.expand_dims(X_val, axis=-1)
+# Then, repeat the channel dimension 3 times (shape becomes 224, 224, 3)
+X_train = np.repeat(X_train, 3, axis=-1)
+X_val = np.repeat(X_val, 3, axis=-1)
+# ------------------------------------
+
+print(f&quot;Final data shapes: X_train: {X_train.shape}, X_val: {X_val.shape}&quot;)
+
+# 6. Create memory-efficient TensorFlow datasets
+train_dataset = tf.data.Dataset.from_tensor_slices((X_train, y_train))
+val_dataset = tf.data.Dataset.from_tensor_slices((X_val, y_val))
+
+# 7. Configure datasets for performance
+batch_size = 16
+AUTOTUNE = tf.data.AUTOTUNE
+train_dataset = train_dataset.shuffle(1000).batch(batch_size).cache().prefetch(buffer_size=AUTOTUNE)
+val_dataset = val_dataset.batch(batch_size).cache().prefetch(buffer_size=AUTOTUNE)
+
+# 8. Define class names manually
+class_names = [&#x27;normal&#x27;, &#x27;pneumonia&#x27;]
+print(f&quot;Using classes: {class_names}&quot;)
+
+print(&quot;\n✅ PneumoniaMNIST datasets created successfully!&quot;)
+
+
+
+
+
+
+
+
+
+
+# [USE THIS FINAL VERSION OF MAMBABLOCK]
+
+class MambaBlock(Layer):
+    def __init__(
+        self,
+        d_state=16,
+        d_conv=4,
+        expand=2,
+        **kwargs,  # Add **kwargs here
+    ):
+        super().__init__(**kwargs)
+        self.d_state = d_state
+        self.d_conv = d_conv
+        self.expand = expand
+
+    def build(self, input_shape):
+        self.d_model = input_shape[-1]
+        self.d_inner = int(self.expand * self.d_model)
+
+        self.norm = LayerNormalization()
+        self.in_proj = Dense(self.d_inner * 2, activation=None)
+
+        self.conv1d = Conv1D(
+            filters=self.d_inner, kernel_size=self.d_conv, strides=1,
+            padding=&quot;same&quot;, # Use &quot;same&quot; to avoid compiler issues
+            groups=self.d_inner, activation=None
+        )
+
+        self.dt_proj = Dense(self.d_inner, activation=None)
+        self.B_proj = Dense(self.d_state, activation=None)
+        self.C_proj = Dense(self.d_state, activation=None)
+        self.out_proj = Dense(self.d_model, activation=None)
+
+        A = tf.experimental.numpy.arange(1, self.d_state + 1, dtype=tf.float32)
+        A = tf.tile(tf.expand_dims(A, 0), [self.d_inner, 1])
+        self.A_log = self.add_weight(shape=A.shape, initializer=lambda shape, dtype: tf.math.log(A), trainable=True, name=&quot;A_log&quot;)
+        self.D = self.add_weight(shape=(self.d_inner,), initializer=&quot;ones&quot;, trainable=True, name=&quot;D&quot;)
+
+        super().build(input_shape)
+
+    def ssm(self, x):
+        A = -tf.exp(tf.cast(self.A_log, dtype=tf.float32))
+        D = tf.cast(self.D, dtype=tf.float32)
+        delta = tf.nn.softplus(self.dt_proj(x))
+        B = self.B_proj(x)
+        C = self.C_proj(x)
+
+        dA = tf.exp(tf.einsum(&#x27;b l d, d n -&gt; b l d n&#x27;, delta, A))
+        dB = tf.einsum(&#x27;b l d, b l n -&gt; b l d n&#x27;, delta, B)
+
+        dA_transposed = tf.transpose(dA, perm=[1, 0, 2, 3])
+        dB_transposed = tf.transpose(dB, perm=[1, 0, 2, 3])
+
+        h = tf.scan(
+            lambda h_prev, elems: h_prev * elems[0] + elems[1],
+            (dA_transposed, dB_transposed),
+            initializer=tf.zeros([tf.shape(x)[0], self.d_inner, self.d_state])
+        )
+
+        h = tf.transpose(h, perm=[1, 0, 2, 3])
+
+        y = tf.einsum(&#x27;b l d n, b l n -&gt; b l d&#x27;, h, C) + x * tf.expand_dims(D, axis=0)
+        return y
+
+    def call(self, x):
+        x_residual = x
+        x = self.norm(x)
+        x_proj = self.in_proj(x)
+        x_intermediate, gate = tf.split(x_proj, num_or_size_splits=2, axis=-1)
+        x_conv = self.conv1d(x_intermediate)
+        x_activated = tf.nn.silu(x_conv)
+        y_ssm = self.ssm(x_activated)
+        y_gated = y_ssm * tf.nn.silu(gate)
+        y_out = self.out_proj(y_gated)
+        return x_residual + y_out
+    # ADD THIS METHOD TO YOUR CLASS
+    def get_config(self):
+        config = super().get_config()
+        config.update({
+            &quot;d_state&quot;: self.d_state,
+            &quot;d_conv&quot;: self.d_conv,
+            &quot;expand&quot;: self.expand,
+        })
+        return config
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        # [USE THIS UPDATED FUNCTION TO CREATE YOUR MODEL]
+
+def create_medmamba_model(input_shape=(224,224,3)):
+    inputs = Input(shape=input_shape)
+# Add this data augmentation block
+    x = RandomFlip(&quot;horizontal&quot;)(inputs)
+    x = RandomRotation(0.1)(x)
+    # Enhanced patch embedding
+    x = Conv2D(64, (16,16), strides=16, padding=&#x27;valid&#x27;)(x)
+    x = LayerNormalization()(x)
+    x = Activation(&#x27;gelu&#x27;)(x)
+
+    # Sequence processing
+    x = Rearrange(&#x27;b h w c -&gt; b (h w) c&#x27;)(x)
+
+    # Add positional embeddings
+    positions = tf.range(start=0, limit=196, delta=1)
+    pos_embed = Embedding(input_dim=196, output_dim=64)(positions)
+    x = x + pos_embed
+
+    # Mamba blocks with skip connections
+    for _ in range(4):
+        x_res = x
+        x = MambaBlock(d_state=16, expand=2)(x)
+        x = Dropout(0.1)(x)
+        x = x_res + x
+
+    # Enhanced classifier
+    x = GlobalAveragePooling1D()(x)
+    x = Dense(128, activation=&#x27;gelu&#x27;)(x)
+    x = Dropout(0.3)(x)
+
+    # --- THIS IS THE REQUIRED CHANGE ---
+    # Final layer for binary classification (2 classes)
+    outputs = Dense(1, activation=&#x27;sigmoid&#x27;)(x)
+
+    return Model(inputs, outputs)
+    
+    
+    
+    
+    
+    
+    # [THIS IS THE FINAL CELL TO RUN]
+
+# 1. Create the improved model
+# This assumes you have already run the cell with the updated create_medmamba_model function
+model = create_medmamba_model()
+model.summary()
+
+# 2. Compile with the correct loss function for binary classification
+model.compile(
+    optimizer=tf.keras.optimizers.Adam(learning_rate=1e-4),
+    loss=&#x27;binary_crossentropy&#x27;,  # --- THIS IS THE REQUIRED CHANGE ---
+    metrics=[&#x27;accuracy&#x27;]
+)
+
+# 3. Define callbacks
+log_dir = &quot;logs/fit/&quot; + datetime.datetime.now().strftime(&quot;%Y%m%d-%H%M%S&quot;)
+tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=log_dir, histogram_freq=1)
+early_stopping = tf.keras.callbacks.EarlyStopping(patience=5, monitor=&#x27;val_loss&#x27;, mode=&#x27;min&#x27;, restore_best_weights=True)
+model_checkpoint = tf.keras.callbacks.ModelCheckpoint(&#x27;best_medmamba_model.keras&#x27;, save_best_only=True, monitor=&#x27;val_loss&#x27;, mode=&#x27;min&#x27;)
+
+
+# 4. Train the model
+history = model.fit(
+    train_dataset,
+    epochs=30,
+    validation_data=val_dataset,
+    callbacks=[tensorboard_callback, early_stopping, model_checkpoint]
+)
+
+# 5. Generate and plot visualizations
+def plot_metrics(history):
+    plt.figure(figsize=(12, 5))
+
+    # Plot Accuracy
+    plt.subplot(1, 2, 1)
+    plt.plot(history.history[&#x27;accuracy&#x27;], label=&#x27;Train Accuracy&#x27;)
+    plt.plot(history.history[&#x27;val_accuracy&#x27;], label=&#x27;Validation Accuracy&#x27;)
+    plt.title(&#x27;Accuracy&#x27;)
+    plt.legend()
+
+    # Plot Loss
+    plt.subplot(1, 2, 2)
+    plt.plot(history.history[&#x27;loss&#x27;], label=&#x27;Train Loss&#x27;)
+    plt.plot(history.history[&#x27;val_loss&#x27;], label=&#x27;Validation Loss&#x27;)
+    plt.title(&#x27;Loss&#x27;)
+    plt.legend()
+
+    plt.tight_layout()
+    plt.savefig(&#x27;training_metrics.png&#x27;)
+    plt.show()
+
+plot_metrics(history)
+
+
+
+
+
+
+
+
+# Create a folder in your Google Drive if it doesn&#x27;t exist
+!mkdir -p &quot;/content/drive/My Drive/saved_models/&quot;
+
+# Copy the saved model from the temporary session to your Google Drive
+!cp best_medmamba_model.keras &quot;/content/drive/My Drive/saved_models/&quot;
+
+print(&quot;✅ Model successfully copied to Google Drive!&quot;)
+
+!ls &quot;/content/drive/My Drive/saved_models/&quot;
+
+
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+</code></pre><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="23dd30f1-1367-8095-84b0-d57b5dc9cbdf" class="code"><code class="language-Python"># [FINAL EVALUATION SCRIPT FOR PneumoniaMNIST]
+
+import numpy as np
+from sklearn.metrics import confusion_matrix, classification_report, roc_curve, auc, roc_auc_score
+import seaborn as sns
+import matplotlib.pyplot as plt
+import tensorflow as tf
+import warnings
+
+from tensorflow.keras.models import Model
+from tensorflow.keras.models import load_model
+from einops.layers.tensorflow import Rearrange
+
+# Suppress the harmless UserWarning from Keras
+warnings.filterwarnings(&#x27;ignore&#x27;, category=UserWarning)
+
+# 1. Load the best saved model from Google Drive
+model_path = &#x27;/content/drive/My Drive/saved_models/best_medmamba_model.keras&#x27;
+best_model = load_model(
+    model_path,
+    custom_objects={
+        &#x27;MambaBlock&#x27;: MambaBlock,
+        &#x27;Rearrange&#x27;: Rearrange
+    }
+)
+print(&quot;✅ Best model loaded successfully from Google Drive!&quot;)
+
+# (The rest of the evaluation script remains the same...)
+
+# 2. Function to get labels and predictions for the binary model
+def get_labels_and_predictions(dataset, model):
+    y_true = []
+    y_pred_probs = []
+    for images, labels in dataset.as_numpy_iterator():
+        y_true.extend(labels)
+        y_pred_probs.extend(model.predict(images, verbose=0))
+
+    y_true = np.array(y_true).flatten()
+    y_pred_probs = np.array(y_pred_probs).flatten()
+    y_pred = (y_pred_probs &gt; 0.5).astype(int)
+    return y_true, y_pred, y_pred_probs
+
+# Get predictions for the validation set
+y_true_val, y_pred_val, y_probs_val = get_labels_and_predictions(val_dataset, best_model)
+
+# 3. Plot Confusion Matrix
+def plot_confusion_matrix(y_true, y_pred, class_names, title=&#x27;Confusion Matrix&#x27;):
+    cm = confusion_matrix(y_true, y_pred)
+    cm_percent = cm.astype(&#x27;float&#x27;) / (cm.sum(axis=1)[:, np.newaxis] + 1e-7) * 100
+
+    plt.figure(figsize=(8, 6))
+    sns.heatmap(cm_percent, annot=True, fmt=&#x27;.1f&#x27;, cmap=&#x27;Blues&#x27;,
+                xticklabels=class_names, yticklabels=class_names,
+                cbar_kws={&#x27;label&#x27;: &#x27;Percentage&#x27;})
+    plt.title(title)
+    plt.ylabel(&#x27;True Label&#x27;)
+    plt.xlabel(&#x27;Predicted Label&#x27;)
+    plt.show()
+
+plot_confusion_matrix(y_true_val, y_pred_val, class_names, &#x27;Validation Confusion Matrix (%)&#x27;)
+
+# 4. Print Classification Report and AUC Score
+print(&quot;\nValidation Classification Report:&quot;)
+print(classification_report(y_true_val, y_pred_val, target_names=class_names))
+print(f&quot;Validation AUC: {roc_auc_score(y_true_val, y_probs_val):.4f}&quot;)
+
+# 5. Plot ROC Curve
+def plot_roc_curve(y_true, y_score, title=&#x27;ROC Curve&#x27;):
+    fpr, tpr, _ = roc_curve(y_true, y_score)
+    roc_auc = auc(fpr, tpr)
+
+    plt.figure(figsize=(8, 6))
+    plt.plot(fpr, tpr, color=&#x27;darkorange&#x27;, lw=2, label=f&#x27;ROC curve (AUC = {roc_auc:.2f})&#x27;)
+    plt.plot([0, 1], [0, 1], &#x27;k--&#x27;, lw=2)
+    plt.xlim([0.0, 1.0])
+    plt.ylim([0.0, 1.05])
+    plt.xlabel(&#x27;False Positive Rate&#x27;)
+    plt.ylabel(&#x27;True Positive Rate&#x27;)
+    plt.title(title)
+    plt.legend(loc=&quot;lower right&quot;)
+    plt.show()
+
+plot_roc_curve(y_true_val, y_probs_val, &#x27;Validation ROC Curve&#x27;)
+
+# 6. FLOPs Calculation
+try:
+    from tensorflow.python.framework.convert_to_constants import convert_variables_to_constants_v2
+    concrete = tf.function(lambda inputs: best_model(inputs))
+    concrete_func = concrete.get_concrete_function(
+        [tf.TensorSpec([1, *inputs.shape[1:]]) for inputs in best_model.inputs])
+    frozen_func = convert_variables_to_constants_v2(concrete_func)
+    graph = frozen_func.graph
+
+    flops = tf.compat.v1.profiler.profile(
+        graph,
+        options=tf.compat.v1.profiler.ProfileOptionBuilder.float_operation()
+    )
+    print(f&quot;\nModel FLOPS: {flops.total_float_ops:,} (~{flops.total_float_ops/1e9:.2f} GFLOPS)&quot;)
+except Exception as e:
+    print(f&quot;\nCould not calculate FLOPS. You can use Total Params from model.summary() instead.&quot;)
+    print(f&quot;Error: {e}&quot;)
+
+# 7. Grad-CAM Visualization
+def get_gradcam(model, img_array, layer_name):
+    grad_model = Model(
+        inputs=[model.inputs],
+        outputs=[model.get_layer(layer_name).output, model.output]
+    )
+    with tf.GradientTape() as tape:
+        conv_outputs, predictions = grad_model(img_array)
+        loss = predictions[0]
+
+    grads = tape.gradient(loss, conv_outputs)
+    pooled_grads = tf.reduce_mean(grads, axis=(0, 1, 2))
+    conv_outputs = conv_outputs[0]
+    heatmap = conv_outputs @ pooled_grads[..., tf.newaxis]
+    heatmap = tf.squeeze(heatmap)
+    heatmap = tf.maximum(heatmap, 0) / (tf.math.reduce_max(heatmap) + tf.keras.backend.epsilon())
+    return heatmap.numpy()
+
+def plot_gradcam_examples(dataset, model, class_names, layer_name, n_examples=3):
+    plt.figure(figsize=(12, 5 * n_examples))
+    for images, labels in dataset.take(1):
+        for i in range(min(n_examples, len(images))):
+            img = images[i].numpy()
+            img_array = np.expand_dims(img, axis=0)
+
+            heatmap = get_gradcam(model, img_array, layer_name)
+            heatmap = tf.image.resize(np.expand_dims(heatmap, axis=-1), img.shape[:2]).numpy().squeeze()
+
+            pred_prob = model.predict(img_array, verbose=0)[0][0]
+            pred_class = class_names[1] if pred_prob &gt; 0.5 else class_names[0]
+
+            plt.subplot(n_examples, 2, 2*i + 1)
+            plt.imshow(img.astype(&#x27;uint8&#x27;))
+            plt.title(f&quot;True: {class_names[int(labels[i])]}\nPred: {pred_class} ({pred_prob:.2f})&quot;)
+            plt.axis(&#x27;off&#x27;)
+
+            plt.subplot(n_examples, 2, 2*i + 2)
+            plt.imshow(img.astype(&#x27;uint8&#x27;))
+            plt.imshow(heatmap, cmap=&#x27;jet&#x27;, alpha=0.4)
+            plt.title(&#x27;Grad-CAM Heatmap&#x27;)
+            plt.axis(&#x27;off&#x27;)
+    plt.tight_layout()
+    plt.show()
+
+first_conv_layer_name = None
+for layer in best_model.layers:
+    if isinstance(layer, tf.keras.layers.Conv2D):
+        first_conv_layer_name = layer.name
+        break
+if first_conv_layer_name:
+    print(f&quot;\nGenerating Grad-CAM visualizations for layer: {first_conv_layer_name}...&quot;)
+    plot_gradcam_examples(val_dataset, best_model, class_names, first_conv_layer_name)
+else:
+    print(&quot;Could not find a Conv2D layer for Grad-CAM.&quot;)
+    
+    
+    
+    
+    import matplotlib.pyplot as plt
+
+# --- Your Final Model Metrics ---
+# (Pulled from your successful evaluation run)
+val_accuracy = 0.88  # 88%
+val_auc = 0.84       # From the ROC Curve
+total_params = 251717 # From your model.summary()
+
+# --- Create the Visualization ---
+fig, ax = plt.subplots(figsize=(8, 5))
+
+# Hide the axes
+ax.axis(&#x27;off&#x27;)
+ax.set_title(&quot;MedMamba Final Performance (PneumoniaMNIST)&quot;, fontsize=20, pad=20)
+
+# Add the metrics as text
+ax.text(0.5, 0.7, f&quot;Validation Accuracy: {val_accuracy:.2%}&quot;,
+        ha=&#x27;center&#x27;, va=&#x27;center&#x27;, fontsize=18, color=&#x27;green&#x27;)
+
+ax.text(0.5, 0.5, f&quot;Validation AUC: {val_auc:.4f}&quot;,
+        ha=&#x27;center&#x27;, va=&#x27;center&#x27;, fontsize=18)
+
+ax.text(0.5, 0.3, f&quot;Total Parameters: {total_params:,}&quot;,
+        ha=&#x27;center&#x27;, va=&#x27;center&#x27;, fontsize=18)
+
+# Save and show the plot
+plt.savefig(&#x27;final_performance_summary.png&#x27;, bbox_inches=&#x27;tight&#x27;)
+plt.show()</code></pre></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedMamba - Pneumonia Detection Results</title>
+    <style>
+        :root {
+            --primary: #4a6fa5;
+            --secondary: #166088;
+            --accent: #4fc3f7;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #28a745;
+            --info: #17a2b8;
+            --warning: #ffc107;
+            --danger: #dc3545;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        
+        .subtitle {
+            font-weight: 300;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            transition: transform 0.2s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        }
+        
+        .card-title {
+            color: var(--primary);
+            margin-top: 0;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .metric-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--accent);
+        }
+        
+        .metric-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin: 0.5rem 0;
+        }
+        
+        .metric-label {
+            color: var(--secondary);
+            font-size: 0.9rem;
+        }
+        
+        .visualization {
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .visualization img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        
+        .comparison-table th, .comparison-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .comparison-table th {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .comparison-table tr:hover {
+            background-color: #e9f7fe;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 0.25em 0.4em;
+            font-size: 75%;
+            font-weight: 700;
+            line-height: 1;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: baseline;
+            border-radius: 0.25rem;
+        }
+        
+        .badge-success {
+            color: white;
+            background-color: var(--success);
+        }
+        
+        .badge-info {
+            color: white;
+            background-color: var(--info);
+        }
+        
+        .section-divider {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(0,0,0,0), var(--primary), rgba(0,0,0,0));
+            margin: 2rem 0;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: var(--secondary);
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>MedMamba Pneumonia Detection</h1>
+            <p class="subtitle">A State Space Model for Medical Image Classification</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="card">
+            <h2 class="card-title">Project Overview</h2>
+            <p>This project implements a novel Mamba-based architecture for detecting pneumonia from chest X-ray images using the PneumoniaMNIST dataset. The model combines the efficiency of state space models with convolutional neural networks for medical image analysis.</p>
+            
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-value">88.0%</div>
+                    <div class="metric-label">Validation Accuracy</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">0.9491</div>
+                    <div class="metric-label">Validation AUC</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">251,717</div>
+                    <div class="metric-label">Total Parameters</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">15.71s</div>
+                    <div class="metric-label">Inference Time</div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="card">
+            <h2 class="card-title">Model Architecture</h2>
+            <p>The MedMamba model combines:</p>
+            <ul>
+                <li>Data augmentation layers (RandomFlip, RandomRotation)</li>
+                <li>Patch embedding via Conv2D</li>
+                <li>4 MambaBlocks with skip connections</li>
+                <li>Global average pooling and dense classifier</li>
+            </ul>
+            
+            <div class="visualization">
+                <img src="https://via.placeholder.com/800x400?text=Model+Architecture+Diagram" alt="Model Architecture">
+            </div>
+        </section>
+        
+        <hr class="section-divider">
+        
+        <section class="card">
+            <h2 class="card-title">Performance Metrics</h2>
+            
+            <h3>Training Progress</h3>
+            <div class="visualization">
+                <img src="https://via.placeholder.com/800x400?text=Training+Metrics+Plot" alt="Training Metrics">
+            </div>
+            
+            <h3>Confusion Matrix</h3>
+            <div class="visualization">
+                <img src="https://via.placeholder.com/600x400?text=Confusion+Matrix" alt="Confusion Matrix">
+                <p>Model shows good performance with 85.9% correct normal classifications and 88.2% correct pneumonia detections.</p>
+            </div>
+            
+            <h3>ROC Curve</h3>
+            <div class="visualization">
+                <img src="https://via.placeholder.com/600x400?text=ROC+Curve" alt="ROC Curve">
+                <p>Excellent AUC score of 0.9491 demonstrates strong discriminatory power.</p>
+            </div>
+        </section>
+        
+        <hr class="section-divider">
+        
+        <section class="card">
+            <h2 class="card-title">Model Comparison</h2>
+            <p>MedMamba compared against RankSVM implementations:</p>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Model</th>
+                        <th>Accuracy</th>
+                        <th>AUC</th>
+                        <th>Inference Time (s)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>MedMamba</td>
+                        <td>0.8760</td>
+                        <td>0.9491</td>
+                        <td>15.7129</td>
+                    </tr>
+                    <tr>
+                        <td>RankSVM (linear)</td>
+                        <td>0.9599</td>
+                        <td>0.9924</td>
+                        <td>0.0602</td>
+                    </tr>
+                    <tr>
+                        <td>RankSVM (RBF)</td>
+                        <td>0.9714</td>
+                        <td>0.9946</td>
+                        <td>0.4344</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="visualization">
+                <img src="https://via.placeholder.com/800x400?text=Model+Comparison+Chart" alt="Model Comparison">
+            </div>
+        </section>
+        
+        <section class="card">
+            <h2 class="card-title">Grad-CAM Visualizations</h2>
+            <p>Model attention maps showing areas of focus for classification decisions:</p>
+            <div class="visualization">
+                <img src="https://via.placeholder.com/800x400?text=Grad-CAM+Visualizations" alt="Grad-CAM Examples">
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>MedMamba Pneumonia Detection System | Created with TensorFlow and Keras</p>
+            <p>Dataset: PneumoniaMNIST | Model trained on Google Colab</p>
+        </div>
+    </footer>
+</body>
+</html>
